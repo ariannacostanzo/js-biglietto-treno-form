@@ -8,38 +8,45 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Calcola il biglietto -->
-    <h2>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
-    <div class="ticket-container" id="price-ticket">
-        <div class="input-group">
-            <div class="input-container">
-                <label for="userName">Nome Cognome</label>
-                <input type="text" id="userName">
-                <p id="nome-obbligatorio" class="text-danger">Questo campo è obbligatorio</p>
-            </div>
-            <div class="input-container">
-                <label for="userKms">Km da percorrere</label>
-                <input type="number" id="userKms">
-                <p id="kms-obbligatorio" class="text-danger">Questo campo è obbligatorio</p>
-            </div>
-            <div class="input-container">
 
-                <label for="userKms">Fascia d'età</label>
-                <select name="Age" id="userAge">
-                    <option value="Riduzione biglietto Minorenni">Minorenne</option>
-                    <option value="Biglietto Standard">Adulto</option>
-                    <option value="Riduzione biglietto Senior">Senior</option>
-                </select>
+<!-- Sezione Calcola il biglietto -->
+    <section id="my-calc-section">
+        <h2>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
+        <div class="ticket-container" id="price-ticket">
+
+            <!-- input group -->
+            <div class="input-group">
+                <div class="input-container">
+                    <label for="userName">Nome Cognome</label>
+                    <input type="text" id="userName">
+                    <p id="nome-obbligatorio" class="text-danger">Questo campo è obbligatorio</p>
+                </div>
+                <div class="input-container">
+                    <label for="userKms">Km da percorrere</label>
+                    <input type="number" id="userKms">
+                    <p id="kms-obbligatorio" class="text-danger">Questo campo è obbligatorio</p>
+                    <p id="kms-non-zero" class="text-danger">Numero non valido</p>
+                </div>
+                <div class="input-container">
+
+                    <label for="userKms">Fascia d'età</label>
+                    <select name="Age" id="userAge">
+                        <option value="Riduzione biglietto Minorenni">Minorenne</option>
+                        <option value="Biglietto Standard">Adulto</option>
+                        <option value="Riduzione biglietto Senior">Senior</option>
+                    </select>
+                </div>
+            </div>
+            <!-- button group -->
+            <div class="button-group">
+                <button type="button" id="genera">Genera</button>
+                <button type="button" id="annulla">Annulla</button>
             </div>
         </div>
-        <div class="button-group">
-            <button type="button" id="genera">Genera</button>
-            <button type="button" id="annulla">Annulla</button>
-        </div>
-    </div>
+    </section>
 
-    <!-- Il tuo Biglietto -->
-    <div id="my-ticket-section" class="d-none" >
+    <!-- Sezione Il tuo Biglietto  -->
+    <section id="my-ticket-section" class="d-none" >
 
         <h2>IL TUO BIGLIETTO</h2>
         <div class="ticket-container" id="train-ticket">
@@ -67,7 +74,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
         
         
         <!-- script -->

@@ -7,6 +7,7 @@ console.log('JS OK')
 // 3. Fare la logica dello sconto
 // 4. Stampare in pagina i risultati
 
+
 // 1. Raccolgo tutti gli elementi che mi servono
 const inputNameElement = document.getElementById('userName');
 const inputKmsElement = document.getElementById('userKms');
@@ -16,6 +17,7 @@ const ticketContainerElement = document.getElementById("my-ticket-section");
 const createBtn = document.getElementById('genera');
 const cancelBtn = document.getElementById('annulla');
 
+//Prezzo
 const pricePerKms = 0.21;
 
 //prendo il p che mi serve come alert

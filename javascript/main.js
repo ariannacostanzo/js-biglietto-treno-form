@@ -43,17 +43,24 @@ createBtn.addEventListener('click', function() {
     //Validatore 
     if (inputName === '') {
         alertNameElement.classList.add('d-block')
+        //Mia scelta personale, se c'è qualche errore allora il biglietto non verrà mostrato
+        ticketContainerElement.classList.add('d-none')
         return;
     } else if (isNaN(inputKms)) {
         alertKmsElement.classList.add('d-block')
+        //Mia scelta personale, se c'è qualche errore allora il biglietto non verrà mostrato
+        ticketContainerElement.classList.add('d-none')
         return;
     } else if (inputKms === 0) {
         alertKms0Element.classList.add('d-block')
+        //Mia scelta personale, se c'è qualche errore allora il biglietto non verrà mostrato
+        ticketContainerElement.classList.add('d-none')
         return;
     }
     
     alertNameElement.classList.remove('d-block')
     alertKmsElement.classList.remove('d-block')
+    alertKms0Element.classList.remove('d-block')
     
 
     //se tutto prima va bene allora si mostra il div
@@ -106,4 +113,3 @@ cancelBtn.addEventListener('click', function(){
 //sistemare meglio lo stile
 //fare il responsive
 //sistemare le cose che mancano
-//sistemare il p che si mostra obbligatorio

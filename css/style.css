@@ -6,6 +6,23 @@
     box-sizing: border-box;
 }
 
+/* generals */
+
+
+body {
+    background-color: #b91450;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2 {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+}
+
+
 /* utils */
 
 .text-danger {
@@ -21,25 +38,12 @@
     display: block;
 }
 
-/* DA SISTEMARE */
-
-body {
-    background-color: #b91450;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-h2 {
-    color: white;
-    font-weight: bold;
-    text-align: center;
-    padding-top: 3rem;
-    padding-bottom: 1rem;
-}
+/* Sezione Calcola il biglietto */
 
 .ticket-container {
     background-color: white;
-    width: 50%;
-    height: 30vh;
+    width: 60%;
+    height: 35vh;
     margin: 0 auto;
 }
 
@@ -52,11 +56,17 @@ h2 {
     justify-content: space-between;
 }
 
+/* input group */
+
 .input-group {
-    display: flex;
-    justify-content: space-evenly;
+    
     padding-top: 1rem;
-    text-align: center;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+.input-container {
+    flex-basis: 100%;
 }
 
 .input-container label {
@@ -76,6 +86,7 @@ h2 {
     font-size: .9rem;
 }
 
+/* button group */
 
 .button-group {
     margin: 0 auto;
@@ -95,17 +106,23 @@ h2 {
     
 }
 
-/* secondo biglietto */
 
+/* Sezione il tuo Biglietto */
 
 
 #train-ticket {
     padding: 1rem;
+    height: 100%;
+    margin-bottom: 3rem;
+}
+
+#train-ticket h3{
+    padding-bottom: .5rem;
 }
 
 .user-ticket {
-    display: flex;
-    border-top: 2px solid grey;
+    border-right: 2px solid grey;
+    border-left: 2px solid grey;
     border-bottom: 2px solid grey;
     height: 80%;
 }
@@ -116,6 +133,7 @@ h2 {
     font-weight: bold;
     text-transform: capitalize;
     font-size: 1.1rem;
+    text-align: center;
 }
 
 .user-info {
@@ -124,5 +142,62 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border-bottom: 1px solid grey;
 }
 
+
+
+/* media query */
+
+@media screen and (min-width: 1150px) {
+
+    /* Sezione Calcola il biglietto */
+    .ticket-container {
+        width: 50%;
+        height: 30vh;
+    }
+    
+    .input-group {
+        display: flex;
+        text-align: left;
+        margin: 0 auto;
+        justify-content: space-evenly;
+    }
+    .input-container {
+        flex-basis: calc(100% / 3);
+    }
+
+    /* Sezione Il tuo Biglietto */
+
+    #train-ticket{
+        height: 30vh;
+    }
+    .user-ticket {
+        display: flex;
+        border-top: 2px solid grey;
+        border-bottom: 2px solid grey;
+        border-right: 0;
+        border-left: 0;
+        height: 80%;
+        text-align: left;
+    }
+    
+
+    .user-info:first-child {
+        flex-grow: 1;
+        text-align: left;
+        
+    }
+    
+    .user-info {
+        flex-basis: 17%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    
+   
+
+
+}

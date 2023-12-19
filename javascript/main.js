@@ -34,7 +34,6 @@ createBtn.addEventListener('click', function() {
     const inputAge = inputAgeElement.value;
 
     //mi preparo il calcolo del biglietto base
-    let TicketPrice = inputKms * pricePerKms;
     
     //creo le variabili che mi servono per fare la logica dei numeri random
     const minCab = 1;
@@ -43,7 +42,7 @@ createBtn.addEventListener('click', function() {
     const maxCpCode = 99999;
 
     let priceTag = document.getElementById("costo-biglietto")
-    priceTag = TicketPrice;
+    priceTag = inputKms * pricePerKms;
     let oldPrice = document.getElementById("oldPrice");
 
     //Validatore 
@@ -95,10 +94,10 @@ createBtn.addEventListener('click', function() {
     
     if (inputAge === "Riduzione biglietto 20%") {
         oldPrice.innerText = priceTag.toFixed(2) + '€';
-        TicketPrice *= 0.8;
+        priceTag *= 0.8;
     }  else if (inputAge === "Riduzione biglietto 40%") {
         oldPrice.innerText = priceTag.toFixed(2) + '€';
-        TicketPrice *= 0.6;
+        priceTag *= 0.6;
     }  else {
         oldPrice.innerText = '';
     }
@@ -107,7 +106,7 @@ createBtn.addEventListener('click', function() {
     //stampo in pagina 
     document.getElementById("nome").innerText = inputName;
     document.getElementById("offerta").innerText = inputAge;
-    document.getElementById("costo-biglietto").innerText = TicketPrice.toFixed(2) + '€';
+    document.getElementById("costo-biglietto").innerText = priceTag.toFixed(2) + '€';
     document.getElementById("carrozza").innerText = randomCab;
     document.getElementById("codice").innerText = String(randomCpCode).padStart(5, 0);
 

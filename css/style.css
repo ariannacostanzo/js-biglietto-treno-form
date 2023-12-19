@@ -92,9 +92,15 @@ h2 {
 .user-info:first-child {
     flex-grow: 1;
     background-color: grey;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 1.1rem;
 }
 
 .user-info {
     flex-basis: 17%;
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }

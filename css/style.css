@@ -169,6 +169,16 @@ h2 {
     border-bottom: 1px solid var(--secondary-color);
 }
 
+#price-container {
+    display: flex;
+}
+
+#price-container span {
+   padding-left: 10px;
+   font-weight: bold;
+   text-decoration: line-through;
+}
+
 
 
 /* media query */

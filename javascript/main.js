@@ -42,6 +42,10 @@ createBtn.addEventListener('click', function() {
     const minCpCode = 1;
     const maxCpCode = 99999;
 
+    let priceTag = document.getElementById("costo-biglietto")
+    priceTag = TicketPrice;
+    let oldPrice = document.getElementById("oldPrice");
+
     //Validatore 
     if (inputName === '') {
         // aggiungo l'alert del nome e rimuovo tutti gli altri eventuali
@@ -90,10 +94,14 @@ createBtn.addEventListener('click', function() {
     //Logica dello sconto
     
     if (inputAge === "Riduzione biglietto 20%") {
+        oldPrice.innerText = priceTag.toFixed(2) + '€';
         TicketPrice *= 0.8;
     }  else if (inputAge === "Riduzione biglietto 40%") {
+        oldPrice.innerText = priceTag.toFixed(2) + '€';
         TicketPrice *= 0.6;
-    }  
+    }  else {
+        oldPrice.innerText = '';
+    }
 
 
     //stampo in pagina 

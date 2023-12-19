@@ -116,11 +116,17 @@ h2 {
     background-color: var(--secondary-color);
     font-size: 1.3rem;
     font-weight: bold;
-    border: 1px solid var(--secondary-color);
+    border: 0;
     padding: 5px 10px;
     border-radius: 10px;
     margin-right: 10px;
+    cursor: pointer;
     
+}
+
+.button-group button:hover {
+    background-color: var(--primary-color);
+    outline: 2px solid var(--secondary-color);
 }
 
 

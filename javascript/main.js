@@ -11,7 +11,7 @@ console.log('JS OK')
 const inputNameElement = document.getElementById('userName');
 const inputKmsElement = document.getElementById('userKms');
 const inputAgeElement = document.getElementById('userAge');
-
+const ticketContainerElement = document.getElementById("my-ticket-section");
 //Buttons
 const createBtn = document.getElementById('genera')
 const cancelBtn = document.getElementById('annulla')
@@ -29,23 +29,38 @@ createBtn.addEventListener('click', function() {
 
     //mi preparo il calcolo del biglietto base
     let TicketPrice = inputKms * pricePerKms;
+    
+    //prendo il p che mi serve come alert
+    const alertNameElement = document.getElementById('nome-obbligatorio')
+    const alertKmsElement = document.getElementById('kms-obbligatorio')
 
     //Validatore 
-    //stampo in pagina il nome ed il tipo di biglietto
-    document.getElementById("nome").innerText = inputName;
-    document.getElementById("offerta").innerText = inputAge;
+    if (inputName === '') {
+        alertNameElement.classList.add('d-block')
+        return
+    } else if (isNaN(inputKms)) {
+        alertKmsElement.classList.add('d-block')
+        return
+    }
+    
+    alertNameElement.classList.remove('d-block')
+    alertKmsElement.classList.remove('d-block')
 
-    console.log(TicketPrice)
-
+    //se tutto prima va bene allora si mostra il div
+    //oppure posso mostrarlo sempre ed in quel caso rimuovo la classe d-none all'elemento
+    ticketContainerElement.classList.remove('d-none')
     //Logica dello sconto
-
+    
     if (inputAge === "Riduzione biglietto Minorenni") {
         TicketPrice *= 0.8;
     }  else if (inputAge === "Riduzione biglietto Senior") {
         TicketPrice *= 0.6
     }  
 
-    console.log(TicketPrice)
+    
+    //stampo in pagina 
+    document.getElementById("nome").innerText = inputName;
+    document.getElementById("offerta").innerText = inputAge;
 
     document.getElementById("costo-biglietto").innerText = TicketPrice.toFixed(2) + '€'
 
@@ -60,4 +75,5 @@ cancelBtn.addEventListener('click', function(){
     inputNameElement.value = ''
     inputKmsElement.value = ''
     inputAgeElement.value = ''
+    ticketContainerElement.classList.add('d-none')
 });

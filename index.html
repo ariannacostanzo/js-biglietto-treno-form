@@ -15,10 +15,12 @@
             <div class="input-container">
                 <label for="userName">Nome Cognome</label>
                 <input type="text" id="userName">
+                <p id="nome-obbligatorio" class="text-danger">Questo campo è obbligatorio</p>
             </div>
             <div class="input-container">
                 <label for="userKms">Km da percorrere</label>
                 <input type="number" id="userKms">
+                <p id="kms-obbligatorio" class="text-danger">Questo campo è obbligatorio</p>
             </div>
             <div class="input-container">
 
@@ -37,35 +39,38 @@
     </div>
 
     <!-- Il tuo Biglietto -->
-    <h2>IL TUO BIGLIETTO</h2>
-    <div class="ticket-container" id="train-ticket">
-        <h3>DETTAGLIO PASSEGGERO</h3>
-        <div class="user-ticket">
-            <div class="user-info">
-                <h3>NOME PASSEGGERO</h3>
-                <p id="nome">Ciao</p>
-            </div>
-            <div class="user-info">
-                <h4>Offerta</h4>
-                <p id="offerta"></p>
-            </div>
-            <div class="user-info">
-                <h4>Carrozza</h4>
-                <p id="carrozza"></p>
-            </div>
-            <div class="user-info">
-                <h4>Codice CP</h4>
-                <p id="codice"></p>
-            </div>
-            <div class="user-info">
-                <h4>Costo biglietto</h4>
-                <p id="costo-biglietto"></p>
+    <div id="my-ticket-section" class="d-none" >
+
+        <h2>IL TUO BIGLIETTO</h2>
+        <div class="ticket-container" id="train-ticket">
+            <h3>DETTAGLIO PASSEGGERO</h3>
+            <div class="user-ticket">
+                <div class="user-info">
+                    <h3>NOME PASSEGGERO</h3>
+                    <p id="nome"></p>
+                </div>
+                <div class="user-info">
+                    <h4>Offerta</h4>
+                    <p id="offerta"></p>
+                </div>
+                <div class="user-info">
+                    <h4>Carrozza</h4>
+                    <p id="carrozza"></p>
+                </div>
+                <div class="user-info">
+                    <h4>Codice CP</h4>
+                    <p id="codice"></p>
+                </div>
+                <div class="user-info">
+                    <h4>Costo biglietto</h4>
+                    <p id="costo-biglietto"></p>
+                </div>
             </div>
         </div>
     </div>
-
-    
-    <!-- script -->
-    <script src="javascript/main.js"></script>
-</body>
-</html>
+        
+        
+        <!-- script -->
+        <script src="javascript/main.js"></script>
+    </body>
+    </html>

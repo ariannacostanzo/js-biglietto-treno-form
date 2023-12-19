@@ -5,3 +5,72 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+
+body {
+    background-color: #b91450;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2 {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+}
+
+.ticket-container {
+    background-color: white;
+    width: 50%;
+    height: 30vh;
+    margin: 0 auto;
+}
+
+#price-ticket {
+    border-radius: 20px;
+    box-shadow: 0 0 10px black;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 1rem;
+    text-align: center;
+}
+
+.input-container label {
+    font-size: 1.3rem;
+    color: #b91450;
+}
+
+.input-container input, .input-container select {
+    display: block;
+    margin-top: 10px;
+    border: 2px solid #b91450;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+
+.button-group {
+    margin: 0 auto;
+    padding-bottom: 1rem;
+
+}
+
+.button-group button {
+    background-color: lightgrey;
+    color: #b91450;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border: 1px solid grey;
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin-right: 10px;
+    
+}

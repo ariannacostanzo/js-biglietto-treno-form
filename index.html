@@ -8,6 +8,40 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Calcola il biglietto -->
+    <h2>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
+    <div class="ticket-container" id="price-ticket">
+        <div class="input-group">
+            <div class="input-container">
+                <label for="userName">Nome Cognome</label>
+                <input type="text" id="userName">
+            </div>
+            <div class="input-container">
+                <label for="userKms">Km da percorrere</label>
+                <input type="number" id="userKms">
+            </div>
+            <div class="input-container">
+
+                <label for="userKms">Fascia d'età</label>
+                <select name="Age" id="userAge">
+                    <option value="Minorenne">Minorenne</option>
+                    <option value="Standard">Adulto</option>
+                    <option value="Over">Senior</option>
+                </select>
+            </div>
+        </div>
+        <div class="button-group">
+            <button type="button">Genera</button>
+            <button type="button">Annulla</button>
+        </div>
+    </div>
+
+    <!-- Il tuo Biglietto -->
+    <h2>IL TUO BIGLIETTO</h2>
+    <div class="ticket-container train-ticket">
+        
+    </div>
+
     
     <!-- script -->
     <script src="javascript/main.js"></script>

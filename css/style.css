@@ -6,6 +6,7 @@
     box-sizing: border-box;
 }
 
+/* DA SISTEMARE */
 
 body {
     background-color: #b91450;
@@ -73,4 +74,27 @@ h2 {
     border-radius: 10px;
     margin-right: 10px;
     
+}
+
+/* secondo biglietto */
+
+#train-ticket {
+    padding: 1rem;
+}
+
+.user-ticket {
+    display: flex;
+    border-top: 2px solid grey;
+    border-bottom: 2px solid grey;
+    height: 80%;
+}
+
+.user-info:first-child {
+    flex-grow: 1;
+    background-color: grey;
+}
+
+.user-info {
+    flex-basis: 17%;
+    padding: 1rem;
 }

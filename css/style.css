@@ -1,3 +1,10 @@
+/* Variables */
+
+:root {
+    --primary-color:#b49594; 
+    --secondary-color: #6a687a;
+}
+
 /* CSS RESET */
 
 * {
@@ -10,7 +17,7 @@
 
 
 body {
-    background-color: #b91450;
+    background-color: var(--primary-color);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -67,19 +74,30 @@ h2 {
 
 .input-container {
     flex-basis: 100%;
+    margin-top: 5px;
 }
 
 .input-container label {
     font-size: 1.3rem;
-    color: #b91450;
+    color: var(--primary-color);
 }
 
 .input-container input, .input-container select {
     display: block;
     margin-top: 10px;
-    border: 2px solid #b91450;
+    border: 2px solid var(--primary-color);
     border-radius: 5px;
     padding: 5px 10px;
+}
+
+.input-container input:focus-visible {
+    outline: 0;
+    border-color: var(--secondary-color);
+}
+
+.input-container select:focus-visible {
+    outline: 0;
+    border-color: var(--secondary-color);
 }
 
 .input-container p {
@@ -95,11 +113,10 @@ h2 {
 }
 
 .button-group button {
-    background-color: lightgrey;
-    color: #b91450;
+    background-color: var(--secondary-color);
     font-size: 1.3rem;
     font-weight: bold;
-    border: 1px solid grey;
+    border: 1px solid var(--secondary-color);
     padding: 5px 10px;
     border-radius: 10px;
     margin-right: 10px;
@@ -114,6 +131,7 @@ h2 {
     padding: 1rem;
     height: 100%;
     margin-bottom: 3rem;
+    box-shadow: 1px 1px 5px black;
 }
 
 #train-ticket h3{
@@ -121,15 +139,15 @@ h2 {
 }
 
 .user-ticket {
-    border-right: 2px solid grey;
-    border-left: 2px solid grey;
-    border-bottom: 2px solid grey;
+    border-right: 2px solid var(--secondary-color);
+    border-left: 2px solid var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
     height: 80%;
 }
 
 .user-info:first-child {
     flex-grow: 1;
-    background-color: grey;
+    background-color: var(--secondary-color);
     font-weight: bold;
     text-transform: capitalize;
     font-size: 1.1rem;
@@ -142,7 +160,7 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid var(--secondary-color);
 }
 
 
@@ -174,8 +192,8 @@ h2 {
     }
     .user-ticket {
         display: flex;
-        border-top: 2px solid grey;
-        border-bottom: 2px solid grey;
+        border-top: 2px solid var(--secondary-color);
+        border-bottom: 2px solid var(--secondary-color);
         border-right: 0;
         border-left: 0;
         height: 80%;

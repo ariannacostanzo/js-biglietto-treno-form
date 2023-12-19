@@ -42,16 +42,25 @@ createBtn.addEventListener('click', function() {
 
     //Validatore 
     if (inputName === '') {
+        // aggiungo l'alert del nome e rimuovo tutti gli altri eventuali
+        alertKmsElement.classList.remove('d-block')
+        alertKms0Element.classList.remove('d-block')
         alertNameElement.classList.add('d-block')
         //Mia scelta personale, se c'è qualche errore allora il biglietto non verrà mostrato
         ticketContainerElement.classList.add('d-none')
         return;
     } else if (isNaN(inputKms)) {
+        // aggiungo l'alert dei Kms e rimuovo tutti gli altri eventuali
+        alertNameElement.classList.remove('d-block')
+        alertKms0Element.classList.remove('d-block')
         alertKmsElement.classList.add('d-block')
         //Mia scelta personale, se c'è qualche errore allora il biglietto non verrà mostrato
         ticketContainerElement.classList.add('d-none')
         return;
     } else if (inputKms === 0) {
+        // aggiungo l'alert dei Kms0 e rimuovo tutti gli altri eventuali
+        alertNameElement.classList.remove('d-block')
+        alertKmsElement.classList.remove('d-block')
         alertKms0Element.classList.add('d-block')
         //Mia scelta personale, se c'è qualche errore allora il biglietto non verrà mostrato
         ticketContainerElement.classList.add('d-none')

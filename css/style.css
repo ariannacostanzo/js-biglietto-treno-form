@@ -90,6 +90,11 @@ h2 {
     padding: 5px 10px;
 }
 
+.input-container select {
+    height: 29px;
+    padding-right: 40px;
+}
+
 .input-container input:focus-visible {
     outline: 0;
     border-color: var(--secondary-color);
@@ -218,7 +223,7 @@ h2 {
     
 
     .user-info:first-child {
-        flex-grow: 1;
+        flex-basis: 32%;
         text-align: left;
         
     }

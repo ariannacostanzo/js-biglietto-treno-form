@@ -19,17 +19,19 @@ const cancelBtn = document.getElementById('annulla');
 
 //Prezzo
 const pricePerKms = 0.21;
+let priceTag = document.getElementById("costo-biglietto")
+let oldPrice = document.getElementById("oldPrice");
 
 //prendo il p che mi serve come alert
 const alertNameElement = document.getElementById('nome-obbligatorio');
 const alertKmsElement = document.getElementById('kms-obbligatorio');
 const alertKms0Element = document.getElementById('kms-non-zero');
-
+const alertSelectElement = document.getElementById('select-not-selected')
 
 //Event Listener di Genera
 
 createBtn.addEventListener('click', function() {
-    const inputName = inputNameElement.value;
+    const inputName = inputNameElement.value.trim();
     const inputKms = parseInt(inputKmsElement.value);
     const inputAge = inputAgeElement.value;
 
@@ -41,9 +43,8 @@ createBtn.addEventListener('click', function() {
     const minCpCode = 1;
     const maxCpCode = 99999;
 
-    let priceTag = document.getElementById("costo-biglietto")
+    
     priceTag = inputKms * pricePerKms;
-    let oldPrice = document.getElementById("oldPrice");
 
     //Validatore 
     if (inputName === '') {
@@ -64,7 +65,7 @@ createBtn.addEventListener('click', function() {
         //Mia scelta personale, se c'è qualche errore allora il biglietto non verrà mostrato
         ticketContainerElement.classList.add('d-none');
         return;
-    } else if (inputKms === 0) {
+    } else if (inputKms < 1  || inputKms > 100000) {
         // aggiungo l'alert dei Kms0 e rimuovo tutti gli altri eventuali
         alertNameElement.classList.remove('d-block');
         alertKmsElement.classList.remove('d-block');
@@ -73,12 +74,21 @@ createBtn.addEventListener('click', function() {
         //Mia scelta personale, se c'è qualche errore allora il biglietto non verrà mostrato
         ticketContainerElement.classList.add('d-none');
         return;
+    }   else if (inputAge === '') {
+        alertNameElement.classList.remove('d-block');
+        alertKmsElement.classList.remove('d-block');
+        alertKms0Element.classList.remove('d-block');
+        alertSelectElement.classList.add('d-block');
+        //Mia scelta personale, se c'è qualche errore allora il biglietto non verrà mostrato
+        ticketContainerElement.classList.add('d-none');
+        return
     }
-    
+
+    // Rimuovo qualsiasi campo che sia apparso
     alertNameElement.classList.remove('d-block');
     alertKmsElement.classList.remove('d-block');
     alertKms0Element.classList.remove('d-block');
-    
+    alertSelectElement.classList.remove('d-block')
 
     //se tutto prima va bene allora si mostra il div
     //oppure posso mostrarlo sempre ed in quel caso rimuovo la classe d-none all'elemento
@@ -129,3 +139,4 @@ cancelBtn.addEventListener('click', function(){
 
 });
 
+//centralizzare meglio il validatore con tipo has error inserito in ogni coso e poi if has error fai tutte le cose
